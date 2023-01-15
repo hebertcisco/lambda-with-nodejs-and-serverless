@@ -1,0 +1,23 @@
+service: lambda-with-nodejs-and-serverless
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          method: GET
+          path: "/"
+  helloWorld:
+    handler: handler.helloWorld
+    events:
+      - http:
+          method: GET
+          path: "/hello-world"
+plugins:
+  - serverless-offline
