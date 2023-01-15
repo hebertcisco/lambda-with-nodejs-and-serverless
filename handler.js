@@ -13,12 +13,13 @@ module.exports.hello = async (event) => {
     ),
   };
 };
+
 module.exports.helloWorld = async (event) => {
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'Hello World'
+        message: 'Hello World!'
       },
       null,
       2
